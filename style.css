@@ -1,0 +1,109 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+nav{
+    background-color: rgb(243, 130, 200);
+    color: aliceblue;
+    height: 60px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav ul{
+  list-style-type: none;
+}
+
+.gamecontainer{
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-family: 'Courier New', Courier, monospaces;
+  color: rgb(243, 130, 200);
+  
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(3,27vh);
+  grid-template-rows: repeat(3,27vh);
+  font-family: 'Courier New', Courier, monospaces;
+  position: relative;
+}
+
+.box {
+
+  border: 2px solid black;
+  font-size: 8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:hover{
+  background-color: rgb(255, 224, 255);
+  cursor: pointer;
+}
+
+.gameinfo{
+
+  padding:0 34px;
+}
+
+.imgbox img{
+  width: 0;
+  transition: width 2s ease-in-out;
+}
+
+.bl {
+  border-left: 0px;
+}
+
+.bt{
+  border-top: 0px;
+}
+
+.bb{
+  border-bottom: 0px;
+}
+
+.br{
+  border-right: 0px;
+}
+
+.line{
+  position: absolute;
+  background-color: black;
+  width: 0vh;
+  height: 1vh;
+  
+}
+
+#reset {
+  padding:4px 12px;
+  border-radius: 4px;
+  background-color: rgb(192, 255, 234);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px)
+{
+  .gamecontainer{
+    flex-wrap: wrap;
+  }
+  .gameinfo{
+    margin-top: 34px;
+  }
+
+  .container{
+    grid-template-columns: repeat(3,22vh);
+    grid-template-rows: repeat(3,22vh);
+  }
+
+  
+}
